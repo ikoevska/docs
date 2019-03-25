@@ -8,45 +8,47 @@ position: 1
 publish: true
 ---
 
-# RadAutoCompleteTextView Getting Started
+# Getting Started with RadAutoCompleteTextView
 
-In this article, you will learn how to initialize **RadAutoCompleteTextView** and use it with it's basic configuration.
+Learn how to initialize `RadAutoCompleteTextView` and use its basic configuration.
 
 ## Installation
+
 Run the following command to add the plugin to your application:
 
-```
+```Shell
 tns plugin add nativescript-ui-autocomplete
 ```
 
 ## Initialization
-Then, in order to add a {% typedoc_link classes:RadAutoCompleteTextView %} instance in a page of your application, you need to define the following XML namespace:
 
-- `xmlns:au="nativescript-ui-autocomplete"` 
+To add a {% typedoc_link classes:RadAutoCompleteTextView %} instance in a page of your application, complete the following steps: 
 
-To create a **RadAutoCompleteTextView** you should use the RadAutoCompleteTextView tag in your .xml file.
-Once you have added the tag you should specify value for the `items` property of the control.
-The `items` property defines the collection of `TokenModel` objects which will be used to provide suggestions to the user input.
-The `hint` property allows you to provide a text that will be displayed when there is no input.
-The `text` property allows you to change the autocomplete text or get the current user input.
-The `TokenModel` object is a data model used by the autocomplete to populate the suggestion view and the chosen items.
+1. Define the following XML namespace:
 
-<snippet id='autocomplete-getting-started'/>
+	```XML
+	xmlns:au="nativescript-ui-autocomplete"
+	``` 
 
-Additionally you need to create, in your model, the collection of `TokenModel` objects which will be used to populate the **RadAutoCompleteTextView**.
+2. Add the `RadAutoCompleteTextView` tag in your `.xml` file and configure its properties.
+	* The `items` property defines the collection of `TokenModel` objects which will be used to provide suggestions to the user input.<br/>The `TokenModel` object is a data model used by the autocomplete to populate the suggestion view and the chosen items.
+	* The `hint` property sets a placeholder text displayed when there is no input.
+	* The `text` property sets the autocomplete text or gets the current user input.
 
-<snippet id='autocomplete-generate-data'/>
+	<snippet id='autocomplete-getting-started'/>
 
-In order to setup the suggestion view, which will be used as a holder to show possible suggestion, you need to add a `SuggestionView` tag and then provide a template for the layout of each suggestion.
+3. In your model, create the collection of `TokenModel` objects used for populating the list of suggestions.
 
-<snippet id='autocomplete-suggestion-view-xml'/>
+	<snippet id='autocomplete-generate-data'/>
 
-The `suggestionViewHeight` property allows you to have control over the height of the suggestion view.
-The `suggestionItemTemplate` is the holder which is used to produce layout for each item of the suggestion view. 
+4. Add a `SuggestionView` tag in your `.xml` file and provide a template for the layout of each suggestion. The suggestion view shows the available suggestions on the screen.
+	* The `suggestionViewHeight` property lets you control the height of the suggestion view.
+	* The `suggestionItemTemplate` sets the layout for each item of the suggestion view.
+
+	<snippet id='autocomplete-suggestion-view-xml'/>
 
 ## References
-Want to see more examples using **RadAutoCompleteTextView**?
-Check our SDK examples repository on GitHub. You will find this and a lot more practical examples with NativeScript UI.
 
-* [RadAutoCompleteTextView Examples](https://github.com/telerik/nativescript-ui-samples/tree/master/autocomplete/app/examples/)
+Want to see more examples using this component?
 
+Check out [SDK examples repository on GitHub](https://github.com/telerik/nativescript-ui-samples/tree/master/autocomplete/app/examples/).
