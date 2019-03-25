@@ -14,7 +14,7 @@ Some time ago we [announced](https://www.nativescript.org/blog/nativescript-ui-w
 
 The [nativescript-pro-ui](https://www.npmjs.com/package/nativescript-pro-ui), [nativescript-telerik-ui](https://www.npmjs.com/package/nativescript-telerik-ui), and [nativescript-telerik-ui-pro](https://www.npmjs.com/package/nativescript-telerik-ui-pro) plugins are now deprecated. Read below to learn how to modify your existing applications to use the new standalone plugins.
 
-# Steps
+## Steps
 
 The following steps apply to all of the depecated plugins: `nativescript-pro-ui`, `nativescript-telerik-ui`, and `nativescript-telerik-ui-pro`:
 
