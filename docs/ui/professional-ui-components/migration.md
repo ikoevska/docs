@@ -1,28 +1,30 @@
 ---
 title: Migrating
 page_title: Migrating | Progress NativeScript UI Documentation
-description: Each component from NativeScript UI now has its own package available for all NativeScript developers on NPMJS.
+description: Each component from NativeScript UI now has its own package available for all NativeScript developers on npm.
 slug: nativescript-ui-migration
 tags: migration, nativescript-pro-ui, nativescript, free, plugin
 position: 100
 publish: true
 ---
 
-# Overview
+# NativeScript UI Migration Overview
 
-Some time ago we [announced](https://www.nativescript.org/blog/nativescript-ui-whats-next) that each component from NativeScript UI was soon to be used as a standalone plugin. Now that the change is a fact, the [nativescript-pro-ui](https://www.npmjs.com/package/nativescript-pro-ui), [nativescript-telerik-ui](https://www.npmjs.com/package/nativescript-telerik-ui) and [nativescript-telerik-ui-pro](https://www.npmjs.com/package/nativescript-telerik-ui-pro) plugins are being deprecated in favor of the new plugins that contain only one component each. This article will guide you through the process of migrating your existing applications to the new plugins.
+Some time ago we [announced](https://www.nativescript.org/blog/nativescript-ui-whats-next) that each NativeScript UI component was soon to become as a standalone plugin. Now this change is a fact.
 
-# Migration Steps
+The [nativescript-pro-ui](https://www.npmjs.com/package/nativescript-pro-ui), [nativescript-telerik-ui](https://www.npmjs.com/package/nativescript-telerik-ui), and [nativescript-telerik-ui-pro](https://www.npmjs.com/package/nativescript-telerik-ui-pro) plugins are now deprecated. Read below to learn how to modify your existing applications to use the new standalone plugins.
 
-If you have an existing NativeScript application using one of the depecated plugins: `nativescript-pro-ui`, `nativescript-telerik-ui` or `nativescript-telerik-ui-pro` you can follow these steps to migrate:
+# Steps
 
-1. Remove the old plugin by using the plugin remove command. For example if you have been using `nativescript-pro-ui`, execute the following command:
-        ```
+The following steps apply to all of the depecated plugins: `nativescript-pro-ui`, `nativescript-telerik-ui`, and `nativescript-telerik-ui-pro`:
+
+1. Remove the old plugin by using the `plugin remove <plugin-name>` command.<br/>For example, to remove `nativescript-pro-ui`, run the following command:
+        ```Shell
         tns plugin remove nativescript-pro-ui
         ```
 
-2. Add the new plugins for each component that your application is using. For example, if you are using all components, execute the following commands:
-        ```
+2. Add the new plugins for each component that your application is using.<br/>For example, if you are using all components, run the following commands:
+        ```Shell
         tns plugin add nativescript-ui-chart
         tns plugin add nativescript-ui-calendar
         tns plugin add nativescript-ui-autocomplete
@@ -32,13 +34,12 @@ If you have an existing NativeScript application using one of the depecated plug
         tns plugin add nativescript-ui-dataform
         ```
 
-3. Iterate over your `.ts` and `.js` files where the plugin is imported and make sure ro change the import from `nativescript-pro-ui/<component-name>` to `nativescript-ui-<component-name>`. For example, if you have a chart import `nativescript-pro-ui/chart`, change it to `nativescript-ui-chart`. This applies to imports regarding Angular wrappers as well. In that case you will have to update your paths from `nativescript-pro-ui/<component-name>/angular` to `nativescript-ui-<component-name>/angular`. For example, if you have a chart import `nativescript-pro-ui/chart/angular`, change it to `nativescript-ui-chart/angular`.
+3. Update your `.ts` and `.js` files to set the correct plugin import. Change the import from `nativescript-pro-ui/<component-name>` to `nativescript-ui-<component-name>`. If you're using Angular, change the import from `nativescript-pro-ui/<component-name>/angular` to `nativescript-ui-<component-name>/angular`.<br/>For example:
+    * If you have a chart import `nativescript-pro-ui/chart`, change it to `nativescript-ui-chart`.
+    * If you have an Angular chart import `nativescript-pro-ui/chart/angular`, change it to `nativescript-ui-chart/angular`.
+     
+    > **IMPORTANT:** The `NativeScriptUIGaugesModule` is renamed to `NativeScriptUIGaugeModule`. If you are using the Gauge in Angular, you need to change `import { NativeScriptUIGaugesModule } from "nativescript-pro-ui/gauges/angular";` to `import { NativeScriptUIGaugeModule } from "nativescript-ui-gauge/angular";`
 
-    > Note, that the `NativeScriptUIGaugesModule` has been renamed to `NativeScriptUIGaugeModule`, meaning that if you are using the Gauge in Angular, you will have to change the `import { NativeScriptUIGaugesModule } from "nativescript-pro-ui/gauges/angular";` to `import { NativeScriptUIGaugeModule } from "nativescript-ui-gauge/angular";`
+4. Update any `.xml` files that contain imports of the old packages. Change the imports using the pattern from **Step 3**.
 
-
-4. If you have `.xml` files that have imports of the old packages, you will need to update them as well from `nativescript-pro-ui/<component-name>` to `nativescript-ui-<component-name>`. For example, if you have a chart import `nativescript-pro-ui/chart`, change it to `nativescript-ui-chart`.
-
-5. Rebuild the application.
-
-> You may need to delete the `node_modules` and `platforms` directories if you get an error during the build.
+5. Rebuild the application.<br/>If you get an error during the build, delete the `node_modules` and `platforms` directories if you get an error during the build.
