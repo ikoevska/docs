@@ -8,42 +8,45 @@ position: 20
 publish: true
 ---
 
-# NativeScript UI Components Getting Started
-The following article assumes that you already have the latest version of NativeScript and have [created a NativeScript application]({% slug introduction %}).
+# NativeScript UI Getting Started
 
-## Installation
+Before you start, make sure that you meet the following prerequisites:
 
-- Open a console window and go to the root directory of your NativeScript application.
-- Install the package that contains the component that you want to use by typing nativescript command that adds a plugin. For example, if you want to use the chart, type  
-````
-$ tns plugin add nativescript-ui-chart
-````
-- Then import/require the installed component in your app
+* You have installed the latest version of NativeScript.
+* You have [created a NativeScript application]({% slug introduction %}).
 
-```TypeScript
-import * as chartModule from "nativescript-ui-chart";
-```
-```JavaScript
-var chartModule = require("nativescript-ui-chart");
-```
+## Installing the Components
+
+1. Open a console window and navigate to the root directory of your NativeScript application.
+2. Use the `plugin add <component-name>` command to install the respective package.<br/>For example, if you want to use the chart, run the following command: 
+
+	```Shell
+	$ tns plugin add nativescript-ui-chart
+	```
+
+3. Import the installed component in your app.
+
+	```TypeScript
+	import * as chartModule from "nativescript-ui-chart";
+	```
+	```JavaScript
+	var chartModule = require("nativescript-ui-chart");
+	```
 {% angular %}
 
 ## Usage in Angular
 
-The Angular directives for NativeScript UI are part of the plugins. For each plugin you can find the directives in the `angular` folder within the plugin's main folder. From that point, you have a couple of approaches to use the components:
+You can find the plugin's Angular directives in the `angular` folder in the plugin's main folder. To be able to use the NativeScript UI components, you can choose one of the following approaches:
 
-- Import the NgModule of the UI component you want to use and add it to the bootstrapped module of your {N} + Angular application, this will enable the use of Ahead-of-time compilation (AoT)
-- Bootstrap your application using the global NativeScript UI directives
-- Import the needed directives in your Angular components and use them where needed
+* (Recommended) Import the NgModule of the UI component you want to use and add it to the bootstrapped module of your application. This enables [ahead-of-time compilation (AoT)](https://angular.io/guide/aot-compiler) and [lazy loading](https://angular.io/guide/ngmodule#lazy-loading-modules-with-the-router).
+* Bootstrap your application using the global NativeScript UI directives.
+* Import the needed directives in your Angular components and use them where needed.
 
-### Using the 'NgModule' of the plugins' UI components
-When using NativeScript UI with Angular the best approach is to directly import the NgModule of each component rather than using the `DIRECTIVES` because when importing the modules you get the benefit of supporting AoT compilation for your project and [lazy loading](https://angular.io/guide/ngmodule#lazy-loading-modules-with-the-router).
+### Enabling Ahead-of-Time Compilation and Lazy Loading
 
+To make your project compatible with AoT, add the plugin's built-in modules to your bootstrapped Angular `NgModule` or to each lazy loaded one. You can find the module for each UI component in its respective `nativescript-ui-<component-name>/angular` folder. Import the ones that you want to use in your project and add them to the `imports`. For more information about how to bundle your application, see [Using Webpack to Bundle Your Code]({% slug bundling-with-webpack %}).
 
-### Making your project compatible with 'Ahead of Time' compilation & 'lazy loading' of modules
-In order to make your project compatible with AoT all that you need is to add the plugin's built-in modules to either your bootstrapped Angular `NgModule` or to each lazy loaded one. You can find the module for each UI component in the **"nativescript-ui-'_component name_'/angular"** folder of each package, simply import those that are used in your project and add them to the `imports`. For more information on how to bundle your application please read the "[Using Webpack to Bundle Your Code](https://docs.nativescript.org/tooling/bundling-with-webpack)" article form the official NativeScript documentation.
+To use [lazy loading](https://angular.io/guide/ngmodule#lazy-loading-modules-with-the-router), add the component's NgModule to your `imports`. For more information about lazy loading with NativeScript and Angular, see [What is Lazy Loading (and why you should use it)?]({% slug lazy-loading %})
 
-To take advantage of [lazy loading](https://angular.io/guide/ngmodule#lazy-loading-modules-with-the-router), simply add the component's ng module to your `imports`. If your project does not take advantage of lazy loading, simply add the modules to the imports of your `AppModule`.
-
+If your project does not use lazy loading, add the modules to the imports of your `AppModule`.
 {% endangular %}
-
