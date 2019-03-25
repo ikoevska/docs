@@ -129,15 +129,15 @@ The **Gauge** (`RadRadialGauge` in the code base) lets you display the current s
 
 ![gauges ios](../../img/ui-for-nativescript/gauges-ios.png "gauges ios") ![gauges android](../../img/ui-for-nativescript/gauges-android.png "gauges android")
 
-## Take it for a spin
+## Take It For A Spin
 
-### The components in action
+### The Components In Action
 
 To see how the components look like on device, get the official NativeScript and Progress NativeScript UI app from the [App Store](https://itunes.apple.com/us/app/examples-nativescript/id1046772499?ls=1&mt=8) or [Google Play](https://play.google.com/store/apps/details?id=org.nativescript.examples).
 
 If you're interested in the code at the core of the working app, check it out in [GitHub](https://github.com/NativeScript/nativescript-marketplace-demo).
 
-### Code to start with
+### Code To Start With
 
 Some getting started code with extensive usage examples for each component is available in the {% nativescript %}[NativeScript UI sample app on GitHub](https://github.com/telerik/nativescript-ui-samples){% endnativescript %}{% angular %}[NativeScript UI sample app on GitHub](https://github.com/telerik/nativescript-ui-samples-angular){% endangular %}. 
 
