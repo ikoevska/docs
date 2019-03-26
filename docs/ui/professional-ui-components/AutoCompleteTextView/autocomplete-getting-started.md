@@ -51,4 +51,4 @@ To add a {% typedoc_link classes:RadAutoCompleteTextView %} instance in a page o
 
 Want to see more examples using this component?
 
-Check out [SDK examples repository on GitHub](https://github.com/telerik/nativescript-ui-samples/tree/master/autocomplete/app/examples/).
+Check out the [SDK examples repository on GitHub](https://github.com/telerik/nativescript-ui-samples/tree/master/autocomplete/app/examples/).

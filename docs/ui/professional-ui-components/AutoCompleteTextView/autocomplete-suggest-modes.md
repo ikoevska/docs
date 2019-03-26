@@ -10,33 +10,35 @@ publish: true
 
 # RadAutoCompleteTextView Suggest Modes
 
-**RadAutoCompleteTextView** has three different modes for providing suggestions. 
+`RadAutoCompleteTextView` provides the following suggest modes: 
 
-- {% typedoc_link enums:AutoCompleteSuggestMode,member:Suggest %}
-- {% typedoc_link enums:AutoCompleteSuggestMode,member:Append %}
-- {% typedoc_link enums:AutoCompleteSuggestMode,member:SuggestAppend %}
+* {% typedoc_link enums:AutoCompleteSuggestMode,member:Suggest %}
+* {% typedoc_link enums:AutoCompleteSuggestMode,member:Append %}
+* {% typedoc_link enums:AutoCompleteSuggestMode,member:SuggestAppend %}
 
-The suggest mode can be changed with the {% typedoc_link classes:RadAutoCompleteTextView,member:suggestionMode %} property of the RadAutoCompleteTextView. The default value is {% typedoc_link enums:AutoCompleteSuggestMode,member:Suggest %}.
+You can set the suggest mode with the {% typedoc_link classes:RadAutoCompleteTextView,member:suggestionMode %} property. The default value is {% typedoc_link enums:AutoCompleteSuggestMode,member:Suggest %}.
 
 <snippet id='autocomplete-suggest-mode'/>
 
 ## Suggest Mode
 
-In `Suggest` mode the autocomplete represents the filtered suggestions, matching the typed text, in a pop-up view, which contains list of the suggestions.
+In `Suggest` mode, the component shows a list of matching suggestions in a pop-up view.
 
 ## Append Mode
-In `Append` mode the autocomplete shows only the first suggestion matching the typed text, which is represented as direct suffix of the typed text.
 
-## Suggest-Append Mode
-In `SuggestAppend` mode the autocomplete combines both upper-mentioned modes. It shows all matching suggestions in a pop-up view and the first of them is appended to the typed text.
+In `Append` mode, the component shows the first matching suggestion by appending it to the user input.
+
+## SuggestAppend Mode
+
+In `SuggestAppend` mode, the component shows all matching suggestions in a pop-up view and appends the first of them to the user input.
 
 ## References
-Want to see more examples using **RadAutoCompleteTextView**?
-Check our SDK examples repository on GitHub. You will find this and a lot more practical examples with NativeScript UI.
 
-* [RadAutoCompleteTextView Examples](https://github.com/telerik/nativescript-ui-samples/tree/master/autocomplete/app/examples/)
+Want to see more examples using this component?
 
-Related articles you might find useful:
+Check out the [SDK examples repository on GitHub](https://github.com/telerik/nativescript-ui-samples/tree/master/autocomplete/app/examples/).
+
+You might also like:
 
 * [**Display Modes**]({% slug autocomplete-display-modes %})
 * [**Completion Modes**]({% slug autocomplete-completion-modes %})

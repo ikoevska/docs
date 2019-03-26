@@ -10,44 +10,47 @@ publish: true
 
 # RadAutoCompleteTextView Display Modes
 
-**RadAutoCompleteTextView** has two predefined display modes.
+`RadAutoCompleteTextView` provides the following display modes:
 
-- {% typedoc_link enums:AutoCompleteDisplayMode,member:Plain %}
-- {% typedoc_link enums:AutoCompleteDisplayMode,member:Tokens %}
+* {% typedoc_link enums:AutoCompleteDisplayMode,member:Plain %}
+* {% typedoc_link enums:AutoCompleteDisplayMode,member:Tokens %}
 
-Display mode can be changed with the {% typedoc_link classes:RadAutoCompleteTextView,member:displayMode %} property of the **RadAutoCompleteTextView**. The default value is {% typedoc_link enums:AutoCompleteDisplayMode,member:Plain %}.
+You can set the display mode with the {% typedoc_link classes:RadAutoCompleteTextView,member:displayMode %} property of `RadAutoCompleteTextView`. The default value is {% typedoc_link enums:AutoCompleteDisplayMode,member:Plain %}.
 
 <snippet id='autocomplete-display-mode'/>
 
 ## Plain Mode
-In plain mode **RadAutoCompleteTextView** displays chosen item as plain text. With this mode only one item can be chosen.
+
+In `Plain` mode, users can select only suggested item. `RadAutoCompleteTextView` shows the selected item as plain text.
 
 ## Tokens Mode
-Tokens mode allows multiple choice of items. Chosen items are displayed as tokens which can be modified or completely changed with custom ones.
 
-When **RadAutoCompleteTextView**'s `displayMode` is `Tokens`, you can apply two different behaviors for token arrangement.
+In `Tokens` mode, users can select multiple suggested items at once. `RadAutoCompleteTextView` shows the selected items as tokens which can be modified or replaced with custom ones.
 
-- {% typedoc_link enums:AutoCompleteLayoutMode,member:Horizontal %}
-- {% typedoc_link enums:AutoCompleteLayoutMode,member:Wrap %}
+In this mode, you can use one of the following token arrangements:
 
-The layout mode of the tokens can be changed with the {% typedoc_link enums:RadAutoCompleteTextView,member:layoutMode %} property.
-The default value of this property is {% typedoc_link enums:AutoCompleteLayoutMode,member:Wrap %}.
+* {% typedoc_link enums:AutoCompleteLayoutMode,member:Horizontal %}
+* {% typedoc_link enums:AutoCompleteLayoutMode,member:Wrap %}
+
+You can set the layout mode of the tokens with the {% typedoc_link enums:RadAutoCompleteTextView,member:layoutMode %} property. The default value is {% typedoc_link enums:AutoCompleteLayoutMode,member:Wrap %}.
 
 <snippet id='autocomplete-layout-mode'/>
 
-## Wrap Layout
-In wrap mode tokens are arranged on multiple lines. Every  time a new line is started the **RadAutoCompleteTextView** is expanding in order to show all tokens.
+### Wrap Layout
 
-## Horizontal Layout
-In horizontal mode tokens are displayed on single line which can be scrolled horizontally in order to display all tokens.
+With the `Wrap` layout, tokens are arranged on multiple lines. When a new line is started, `RadAutoCompleteTextView` expands to show all tokens.
+
+### Horizontal Layout
+
+With the `Horizontal` layout, tokens are arranged on a single line which can be scrolled horizontally to display all tokens.
 
 ## References
-Want to see more examples using **RadAutoCompleteTextView**?
-Check our SDK examples repository on GitHub. You will find this and a lot more practical examples with NativeScript UI.
 
-* [RadAutoCompleteTextView Examples](https://github.com/telerik/nativescript-ui-samples/tree/master/autocomplete/app/examples/)
+Want to see more examples using this component?
 
-Related articles you might find useful:
+Check out the [SDK examples repository on GitHub](https://github.com/telerik/nativescript-ui-samples/tree/master/autocomplete/app/examples/).
+
+You might also like:
 
 * [**Completion Modes**]({% slug autocomplete-completion-modes %})
 * [**Suggest Modes**]({% slug autocomplete-suggest-modes %})

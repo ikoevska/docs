@@ -12,10 +12,10 @@ publish: true
 
 `RadAutoCompleteTextView` provides the following modes for the filtering of suggestions: 
 
-- {% typedoc_link enums:AutoCompleteCompletionMode,member:StartsWith %}
-- {% typedoc_link enums:AutoCompleteCompletionMode,member:Contains %}
+* {% typedoc_link enums:AutoCompleteCompletionMode,member:StartsWith %}
+* {% typedoc_link enums:AutoCompleteCompletionMode,member:Contains %}
 
-You can change the completion mode with the {% typedoc_link classes:RadAutoCompleteTextView,member:completionMode %} property of `RadAutoCompleteTextView`. The default value is {% typedoc_link enums:AutoCompleteCompletionMode,member:StartsWith %}.
+You can set the completion mode with the {% typedoc_link classes:RadAutoCompleteTextView,member:completionMode %} property of `RadAutoCompleteTextView`. The default value is {% typedoc_link enums:AutoCompleteCompletionMode,member:StartsWith %}.
 
 <snippet id='autocomplete-completion-mode'/>
 
@@ -34,9 +34,9 @@ In `Contains` mode, the component shows all suggestions that contain the typed p
 
 Want to see more examples using this component?
 
-Check out [SDK examples repository on GitHub](https://github.com/telerik/nativescript-ui-samples/tree/master/autocomplete/app/examples/).
+Check out the [SDK examples repository on GitHub](https://github.com/telerik/nativescript-ui-samples/tree/master/autocomplete/app/examples/).
 
-You might also find useful:
+You might also like:
 
 * [**Display Modes**]({% slug autocomplete-display-modes %})
 * [**Suggest Modes**]({% slug autocomplete-suggest-modes %})
