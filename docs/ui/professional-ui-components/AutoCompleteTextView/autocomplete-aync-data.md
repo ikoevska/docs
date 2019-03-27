@@ -42,4 +42,3 @@ Check out the [SDK examples repository on GitHub](https://github.com/telerik/nat
 You might also like:
 
 * [Remote Data Fetch Example](https://github.com/telerik/nativescript-ui-samples/tree/master/autocomplete/app/examples/remote-data-fetch)
-
