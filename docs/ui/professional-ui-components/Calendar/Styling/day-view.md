@@ -10,22 +10,26 @@ publish: true
 
 # RadCalendar Day View Styling
 
-In order to apply custom style for this mode, you need to initialize the `dayViewStyle` property of `RadCalendar` with instance of `CalendarDayViewStyle`.
-To apply custom style to the cells that are displayed at the top you can use the same properties as in the [styling of the month view]({% slug calendar-monthview-styling %} "Read more about styling in Month view mode"). Additionally the `CalendarDayViewStyle` has `dayEventsViewStyle` and `allDayEventsViewStyle` .
+To apply custom style for the day view mode, you need to initialize the `dayViewStyle` property of `RadCalendar` with a `CalendarDayViewStyle` instance.
 
-The `dayEventsViewStyle` should be used with a  `DayEventsViewStyle` instance which has properties for the following styling options:
+To apply custom style to the cells displayed at the top, you can use the same properties available for [styling of the month view]({% slug calendar-monthview-styling %} "Read more about styling in Month view mode"). You can also use the following `CalendarDayViewStyle` properties specific to the day view: `dayEventsViewStyle` and `allDayEventsViewStyle` .
 
-- `backgroundColor` -  defines the background color for the view with the events
-- `timeLabelFormat` -  defines the format used to display the time labels in the timeline
-- `timeLabelTextColor` -  defines the text color used to display the time labels in the timeline
-- `timeLabelTextSize` -  defines the text size used to display the time labels in the timeline
+## dayEventsViewStyle
 
-The `allDayEventsViewStyle` should be used with a  `AllDayEventsViewStyle` instance which has properties for the following styling options:
+Use `dayEventsViewStyle` with a `DayEventsViewStyle` instance. The instance provides the following styling options:
 
-- `backgroundColor` - defines the background color for the area where all day events are presented
-- `allDayText` - defines the text that notifies that the top area contains all day events
-- `allDayTextIsVisible` - defines wether the text that notifies that the top area contains all day events should be visible
+* `backgroundColor`: Sets the background color for the events view.
+* `timeLabelFormat`: Sets the display format for time labels in the timeline.
+* `timeLabelTextColor`: Sets the color of the time labels in the timeline.
+* `timeLabelTextSize`: Sets the font size of the time labels in the timeline.
 
+## allDayEventsViewStyle
+
+Use `allDayEventsViewStyle` with an `AllDayEventsViewStyle` instance. The instance provides the following styling options:
+
+* `backgroundColor`: Sets the background color for the area where All Day events are shown.
+* `allDayText`: Sets the text that indicates that the top area contains All Day events.
+* `allDayTextIsVisible`: Shows or hides the text that indicates that the top area contains All Day events.
 
 ## Example
 Here's an example of using the properties mentioned above:
