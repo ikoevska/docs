@@ -10,13 +10,13 @@ publish: true
 
 # Styling the RadCalendar Day View
 
-To apply custom style for the day view mode, you need to initialize the `dayViewStyle` property of `RadCalendar` with a `CalendarDayViewStyle` instance.
+To apply custom style for the day view, you need to initialize the `dayViewStyle` property of `RadCalendar` with a `CalendarDayViewStyle` instance.
 
 To apply custom style to the cells displayed at the top, you can use the same properties available for [styling of the month view]({% slug calendar-monthview-styling %} "Read more about styling in Month view mode"). You can also use the following `CalendarDayViewStyle` properties specific to the day view: `dayEventsViewStyle` and `allDayEventsViewStyle` .
 
 ## dayEventsViewStyle
 
-Use `dayEventsViewStyle` with a `DayEventsViewStyle` instance. The instance provides the following styling options:
+`dayEventsViewStyle` provides the following styling properties:
 
 * `backgroundColor`: Gets or sets the background color for the events view.
 * `timeLabelFormat`: Gets or sets the display format for time labels in the timeline.
@@ -25,7 +25,7 @@ Use `dayEventsViewStyle` with a `DayEventsViewStyle` instance. The instance prov
 
 ## allDayEventsViewStyle
 
-Use `allDayEventsViewStyle` with an `AllDayEventsViewStyle` instance. The instance provides the following styling options:
+`allDayEventsViewStyle` provides the following styling properties:
 
 * `backgroundColor`: Gets or sets the background color for the area where All Day events are shown.
 * `allDayText`: Gets or sets the text indicating that the top area shows All Day events.

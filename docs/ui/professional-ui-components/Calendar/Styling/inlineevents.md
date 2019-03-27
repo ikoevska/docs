@@ -10,9 +10,9 @@ publish: true
 
 # Styling RadCalendar Inline Events
 
-Inline events are time-boxed calendar events within a selected day in Month or Week view. To style inline events, you need to initialize the `inlineEventCellStyle` member of `CalendarMonthViewStyle` or `CalendarWeekViewStyle` with an instance of the `InlineEventCellStyle` class.
+Inline events are time-boxed calendar events within a selected day in month or week view. To style inline events, you need to initialize the `inlineEventCellStyle` member of `CalendarMonthViewStyle` or `CalendarWeekViewStyle` with an instance of the `InlineEventCellStyle` class.
 
-`InlineEventCellStyle` provides the following properties:
+`InlineEventCellStyle` provides the following styling properties:
 
 * `cellBackgroundColor`: Gets or sets the background color of the inline event's cell.
 * `eventTextColor`: Gets or sets the text color for the inline event.

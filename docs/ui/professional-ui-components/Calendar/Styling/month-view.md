@@ -8,77 +8,78 @@ position: 9
 publish: true
 ---
 
-# RadCalendar Month View Styling
+# Styling the RadCalendar Month View
 
-The Month view mode has the most complicated styling since there are many different types of cells that are used to represent different information to the user.
-In order to apply custom style for this mode, you need to initialize the `monthViewStyle` property of `RadCalendar` with instance of `CalendarMonthViewStyle`.
-The following image shows the different UI elements that are customizable in this view mode:
+To apply custom style for the month view, you need to initialize the `monthViewStyle` property of `RadCalendar` with a `CalendarMonthViewStyle` instance.
 
-There are some properties that change the month view :
+## View Styling
 
-- `backgroundColor` - a color that is applied as background color
-- `showTitle` - determines if title should be shown
-- `showWeekNumbers` - determines if week numbers should be shown
-- `showDayNames` - determines if day names should be shown
-- {% typedoc_link classes:CalendarMonthViewStyle,member:selectionShape %} - defines the decoration shape drawn in the center of a selected cell within the month view. Accepts values from the {% typedoc_link enums:CalendarSelectionShape %} enumeration
-- {% typedoc_link classes:CalendarMonthViewStyle,member:selectionShapeSize %} - defines the size of the decoration shape drawn in the center of a selected cell within the month view. In case the shape is {% typedoc_link enums:CalendarSelectionShape,member:Square %} the property determines the side of the square draw. If the shape is {% typedoc_link enums:CalendarSelectionShape,member:Round %} the size determines the radius of the circle drawn
-- {% typedoc_link classes:CalendarMonthViewStyle,member:selectionShapeColor %} - determines the color of the selection shape
+`CalendarMonthViewStyle` provides the following styling properties:
 
-In order to style any type of the available cell in calendar you need to initialize the corresponding style property of `CalendarMonthViewStyle` class, that is used for this view mode:
+* `backgroundColor`: Gets or sets the background color.
+* `showTitle`: Shows or hides the month view title.
+* `showWeekNumbers`: Shows or hides week numbers.
+* `showDayNames`: Shows or hides the names of days.
+* {% typedoc_link classes:CalendarMonthViewStyle,member:selectionShape %}: Gets or sets the decoration shape drawn in the center of a selected cell within the month view. Accepts values from the {% typedoc_link enums:CalendarSelectionShape %} enumeration.
+* {% typedoc_link classes:CalendarMonthViewStyle,member:selectionShapeSize %}: Gets or sets the size of the decoration shape drawn in the center of a selected cell within the month view. If the shape is {% typedoc_link enums:CalendarSelectionShape,member:Square %}, the property determines the side of the square. If the shape is {% typedoc_link enums:CalendarSelectionShape,member:Round %}, the property determines the radius of the circle.
+* {% typedoc_link classes:CalendarMonthViewStyle,member:selectionShapeColor %}: Gets or sets the color of the shape.
 
-- `dayCellStyle` -  defines styling of cells that represent a regular day in month/week. This is the default style that will be applied if the date is not special
-- `selectedDayCellStyle` -  defines styling of selected cells
-- `todayCellStyle` -  defines styling of the cell that shows the today date
-- `dayNameCellStyle` -  defines styling of cells with names of days
-- `weekNumberCellStyle` - defines styling of cells with number of weeks
-- `weekendCellStyle` - defines styling of cells that visualize days of the weekends
-- `titleCellStyle` - defines styling for the calendar title with month name
+## Cell Styling
 
-There are two classes you should use to initialize these properties:  `CalendarCellStyle` and its inheritor `CalendarDayCellStyle`.
-Properties `weekNumberCellStyle`, `dayNameCellStyle` and `titleCellStyle` should be initialized with `CalendarCellStyle` instance.
-Properties `dayCellStyle`, `todayCellStyle`, `selectedDayStyle` and `weekendCellStyle` should be initialized with `CalendarDayCellStyle`.
+To style any of the available cell types, you need to initialize the corresponding style property of the `CalendarMonthViewStyle` class. The following styling properties are available:
 
-The `CalendarCellStyle` class has properties for common styling options of any of the cells:
+* `dayCellStyle`: Styles the cells that represent a regular day in a month. This is the default style. Initialize this property with a `CalendarDayCellStyle` instance.
+* `selectedDayCellStyle`: Styles the selected cell. Initialize this property with a `CalendarDayCellStyle` instance.
+* `todayCellStyle`: Styles the cell that shows today's date. Initialize this property with a `CalendarDayCellStyle` instance.
+* `dayNameCellStyle`: Styles the cell that shows the name of the day. Initialize this property with a `CalendarCellStyle` instance.
+* `weekNumberCellStyle`: Styles the cells that show the week number. Initialize this property with a `CalendarCellStyle` instance.
+* `weekendCellStyle` Styles the weekend day cells. Initialize this property with a `CalendarDayCellStyle` instance.
+* `titleCellStyle`: Styles the month title. Initialize this property with a `CalendarCellStyle` instance.
 
-- `cellBorderWidth` -  defines the border width of the cell
-- `cellBorderColor` -  defines the border color of the cell
-- `cellBackgroundColor` -  defines the background color of the cell
-- `cellAlignment` -  defines the content alignment in the cell
-- `cellTextColor` -  defines the color for the text shown in the cell
-- `cellTextFontName` -  defines the name of the font you want to use.
-- `cellTextFontStyle` -  defines the style of the font used for text in cell.
-- `cellTextSize` -  defines the text size in cell
-- `cellPaddingHorizontal` -  defines the amount of horizontal padding
-- `cellPaddingVertical` -  defines the amount of vertical padding  
+### All Cells
 
-The `CalendarDayCellStyle` extends this set with some style properties specific to the date cells like:
+`CalendarCellStyle` provides the following styling properties:
 
-- `showEventsText` -  defines if the events should be visualized with text and shape or with shape only
-- `eventTextColor` -  defines the color for the text of events shown in the date cell
-- `eventFontName` -  defines the name of the font you want to use for events text in date cell.
-- `eventFontStyle` -  defines the style of the font used for events text in date cell.
-- `eventTextSize` - defines the size of the events text in date cell
+* `cellBorderWidth`: Gets or sets the border width of the cell.
+* `cellBorderColor`: Gets or sets the border color of the cell.
+* `cellBackgroundColor`: Gets or sets the background color of the cell.
+* `cellAlignment`: Gets or sets the alignment of the cell's contents.
+* `cellTextColor`: Gets or sets the color of the cell's text contents.
+* `cellTextFontName`: Gets or sets the font for the cell's text contents by name.
+* `cellTextFontStyle`: Gets or sets the font style for the cell's text contents.
+* `cellTextSize`: Gets or sets the text size of the cell's text contents.
+* `cellPaddingHorizontal`: Gets or sets the amount of horizontal padding of the cell's contents.
+* `cellPaddingVertical`: Gets or sets the amount of vertical padding of the cell's contents.  
 
+### Date Cells
+
+`CalendarDayCellStyle` inherits `CalendarCellStyle` and provides the following additional stying properties:
+
+* `showEventsText`: Shows or hides the event text shown in the date cell. All events are indicated by a shape, regardless if the title is shown or not.
+* `eventTextColor`: Gets or sets the text color for the events shown in the date cell.
+* `eventFontName`: Gets or sets the font for the event text shown in the date cell by name.
+* `eventFontStyle`: Gets or sets the font style for the event text in the date cell.
+* `eventTextSize`: Gets or sets the font size of the event text in the date cell.
 
 ## Example
 
-To better illustrate the usage of styling properties, we will use a simple scenario in which the cells are customized:
+The following example shows how to style the month view:
 
 <snippet id='calendar-monthview-styling'/>
 
-This is how the calendar looks like:
+The following screenshots show the example running on device:
 
 ![Calendar month view styling](../../../img/ns_ui/calendar_styling_month_ios.png "iOS")      ![Calendar month view styling](../../../img/ns_ui/calendar_styling_month_android.png "Android")
 
 ## References
-Want to see this scenario in action?
-Check our SDK examples repo on GitHub. You will find this and many other practical examples with NativeScript UI.
 
-* [Styling Example](https://github.com/telerik/nativescript-ui-samples/tree/master/calendar/app/calendar/cell-styling)
+Want to see more examples using this component?
 
-Related articles you might find useful:
+Check out the [SDK examples repository on GitHub](https://github.com/telerik/nativescript-ui-samples/tree/master/calendar/app/calendar/cell-styling).
 
-* [**Styling Inline Events**]({% slug calendar-features-styling-inlineevents %})
-* [**Styling Year View**]({% slug calendar-features-styling-year-view %})
-* [**Styling Week View**]({% slug calendar-features-styling-week-view %})
-* [**Styling Month Name**]({% slug calendar-features-styling-monthnames-view %})
+You might also like:
+
+* [Styling Inline Events]({% slug calendar-features-styling-inlineevents %})
+* [Styling Year View]({% slug calendar-features-styling-year-view %})
+* [Styling Week View]({% slug calendar-features-styling-week-view %})
+* [Styling Month Name]({% slug calendar-features-styling-monthnames-view %})
