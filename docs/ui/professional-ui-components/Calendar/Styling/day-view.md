@@ -8,7 +8,7 @@ position: 13
 publish: true
 ---
 
-# RadCalendar Day View Styling
+# Styling the RadCalendar Day View
 
 To apply custom style for the day view mode, you need to initialize the `dayViewStyle` property of `RadCalendar` with a `CalendarDayViewStyle` instance.
 
