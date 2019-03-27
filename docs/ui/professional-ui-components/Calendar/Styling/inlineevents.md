@@ -8,42 +8,43 @@ position: 13
 publish: true
 ---
 
-# RadCalendar Inline Events Styling
-When working with Inline events, specifying a color for the event's cell indicator (i.e. the color is used for the shape that visualizes the event in the corresponding day cell) is done by using the `eventColor` property of `CalendarEvent` class. If `CalendarEventsViewMode.Inline` is chosen for events view mode, you can apply additional styling options to the cells of the table view shown for inline events.
+# Styling RadCalendar Inline Events
 
-Since events are available for Month and Week views you should initialize the `inlineEventCellStyle` member of `CalendarMonthViewStyle` or `CalendarWeekViewStyle` with instance of `InlineEventCellStyle` class.
+Inline events are time-boxed calendar events within a selected day in Month or Week view. To style inline events, you need to initialize the `inlineEventCellStyle` member of `CalendarMonthViewStyle` or `CalendarWeekViewStyle` with an instance of the `InlineEventCellStyle` class.
 
-`InlineEventCellStyle` class has the following properties:
+`InlineEventCellStyle` provides the following properties:
 
-- `cellBackgroundColor` - defines the background color of inline events cell.
-- `eventTextColor` - defines the color for inline event text.
-- `eventFontName` - defines the font name for inline event text.
-- `eventFontStyle` - defines the font style for inline event text.
-- `eventTextSize` - defines the text size for inline event text.
-- `timeTextColor` - defines the color for time shown for inline event.
-- `timeFontName` - defines the font name for time shown for inline event.
-- `timeFontStyle` - Gets or sets the font style for time shown for inline event.
-- `timeTextSize` - defines the text size for time shown for inline event.
+* `cellBackgroundColor`: Gets or sets the background color of the inline event's cell.
+* `eventTextColor`: Gets or sets the text color for the inline event.
+* `eventFontName`: Gets or sets the font for the inline event by font name.
+* `eventFontStyle`: Gets or sets the font style for the inline event.
+* `eventTextSize`: Gets or sets the text size for the inline event.
+* `timeTextColor`: Gets or sets the color for the time of the inline event.
+* `timeFontName`: Gets or sets the font for the time of the inline event by font name.
+* `timeFontStyle`: Gets or sets the font style fo the time of the inline event.
+* `timeTextSize`: Gets or sets the text size for the time of the inline event.
 
+To set a color for the inline event's cell indicator (the shape that indicates the event in the corresponding day cell), use the `eventColor` property of the `CalendarEvent` class. When `CalendarEventsViewMode.Inline` is set, you can apply additional styling options to the cells of the table view shown for inline events.
 
 ## Example
-Here's an example of using the styling properties mentioned above:
+
+The following example shows the use of `InlineEventCellStyle`:
 
 <snippet id='calendar-inlineevents-styling'/>
 
-and the visual result:
+The following screenshots show the example running on device:
 
 ![Calendar year view styling](../../../img/ns_ui/calendar_styling_inline_events_ios.png "iOS")      ![Calendar year view styling](../../../img/ns_ui/calendar_styling_inline_events_android.png "Android")
 
 ## References
-Want to see this scenario in action?
-Check our SDK examples repo on GitHub. You will find this and many other practical examples with NativeScript UI.
 
-* [Styling Example](https://github.com/telerik/nativescript-ui-samples/tree/master/calendar/app/calendar/cell-styling)
+Want to see more examples using this component?
 
-Related articles you might find useful:
+Check out the [SDK examples repository on GitHub](https://github.com/telerik/nativescript-ui-samples/tree/master/calendar/app/calendar/cell-styling).
 
-* [**Styling Month Name**]({% slug calendar-features-styling-monthnames-view %})
-* [**Styling Year View**]({% slug calendar-features-styling-year-view %})
-* [**Styling Week View**]({% slug calendar-features-styling-week-view %})
-* [**Styling Month View**]({% slug calendar-features-styling-month-view %})
+You might also like:
+
+* [Styling Month Name]({% slug calendar-features-styling-monthnames-view %})
+* [Styling Year View]({% slug calendar-features-styling-year-view %})
+* [Styling Week View]({% slug calendar-features-styling-week-view %})
+* [Styling Month View]({% slug calendar-features-styling-month-view %})
