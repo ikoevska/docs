@@ -28,28 +28,29 @@ Use `dayEventsViewStyle` with a `DayEventsViewStyle` instance. The instance prov
 Use `allDayEventsViewStyle` with an `AllDayEventsViewStyle` instance. The instance provides the following styling options:
 
 * `backgroundColor`: Sets the background color for the area where All Day events are shown.
-* `allDayText`: Sets the text that indicates that the top area contains All Day events.
-* `allDayTextIsVisible`: Shows or hides the text that indicates that the top area contains All Day events.
+* `allDayText`: Sets the text indicating that the top area shows All Day events.
+* `allDayTextIsVisible`: Shows or hides the text indicating that the top area shows All Day events.
 
 ## Example
-Here's an example of using the properties mentioned above:
+
+The following example shows the use of the of `dayEventsViewStyle` and `allDayEventsViewStyle`:
 
 <snippet id='calendar-dayview-styling'/>
 
-This is how the calendar looks like in that case:
+The following screenshots show the example running on device:
 
 ![Calendar day view styling](../../../img/ns_ui/calendar_styling_day_ios.png "iOS")      ![Calendar day view styling](../../../img/ns_ui/calendar_styling_day_android.png "Android")
 
 ## References
-Want to see this scenario in action?
-Check our SDK examples repo on GitHub. You will find this and many other practical examples with NativeScript UI.
 
-* [Styling Example](https://github.com/telerik/nativescript-ui-samples/tree/master/calendar/app/calendar/cell-styling)
+Want to see more examples using this component?
 
-Related articles you might find useful:
+Check out the [SDK examples repository on GitHub](https://github.com/telerik/nativescript-ui-samples/tree/master/calendar/app/calendar/cell-styling).
 
-* [**Styling Inline Events**]({% slug calendar-features-styling-inlineevents %})
-* [**Styling Month Name**]({% slug calendar-features-styling-monthname-view %})
-* [**Styling Week View**]({% slug calendar-features-styling-week-view %})
-* [**Styling Month View**]({% slug calendar-features-styling-month-view %})
-* [**Styling Year View**]({% slug calendar-features-styling-year-view %})
+You might also like:
+
+* [Styling Inline Events]({% slug calendar-features-styling-inlineevents %})
+* [Styling Month Name]({% slug calendar-features-styling-monthname-view %})
+* [Styling Week View]({% slug calendar-features-styling-week-view %})
+* [Styling Month View]({% slug calendar-features-styling-month-view %})
+* [Styling Year View]({% slug calendar-features-styling-year-view %})
