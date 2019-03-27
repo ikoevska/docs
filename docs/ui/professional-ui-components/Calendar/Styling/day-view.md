@@ -18,22 +18,22 @@ To apply custom style to the cells displayed at the top, you can use the same pr
 
 Use `dayEventsViewStyle` with a `DayEventsViewStyle` instance. The instance provides the following styling options:
 
-* `backgroundColor`: Sets the background color for the events view.
-* `timeLabelFormat`: Sets the display format for time labels in the timeline.
-* `timeLabelTextColor`: Sets the color of the time labels in the timeline.
-* `timeLabelTextSize`: Sets the font size of the time labels in the timeline.
+* `backgroundColor`: Gets or sets the background color for the events view.
+* `timeLabelFormat`: Gets or sets the display format for time labels in the timeline.
+* `timeLabelTextColor`: Gets or sets the color of the time labels in the timeline.
+* `timeLabelTextSize`: Gets or sets the font size of the time labels in the timeline.
 
 ## allDayEventsViewStyle
 
 Use `allDayEventsViewStyle` with an `AllDayEventsViewStyle` instance. The instance provides the following styling options:
 
-* `backgroundColor`: Sets the background color for the area where All Day events are shown.
-* `allDayText`: Sets the text indicating that the top area shows All Day events.
+* `backgroundColor`: Gets or sets the background color for the area where All Day events are shown.
+* `allDayText`: Gets or sets the text indicating that the top area shows All Day events.
 * `allDayTextIsVisible`: Shows or hides the text indicating that the top area shows All Day events.
 
 ## Example
 
-The following example shows the use of the of `dayEventsViewStyle` and `allDayEventsViewStyle`:
+The following example shows the use of `dayEventsViewStyle` and `allDayEventsViewStyle`:
 
 <snippet id='calendar-dayview-styling'/>
 
