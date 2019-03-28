@@ -10,7 +10,7 @@ publish: true
 
 # Styling the RadCalendar Day View
 
-To apply custom style for the day view, you need to initialize the `dayViewStyle` property of `RadCalendar` with a `CalendarDayViewStyle` instance.
+Тo apply custom styling to the day view, you need to initialize the `dayViewStyle` property of `RadCalendar` with a `CalendarDayViewStyle` instance.
 
 To apply custom style to the cells displayed at the top, you can use the same properties available for [styling of the month view]({% slug calendar-monthview-styling %} "Read more about styling in Month view mode"). You can also use the following `CalendarDayViewStyle` properties specific to the day view: `dayEventsViewStyle` and `allDayEventsViewStyle` .
 

@@ -8,30 +8,50 @@ position: 12
 publish: true
 ---
 
-# RadCalendar MonthNames View Mode Styling
+# Styling the RadCalendar MonthNames View
 
-In order to apply custom style for this mode, you need to initialize the `monthNamesViewStyle` property of `RadCalendar` with instance of `CalendarMonthNamesViewStyle`.
-In this view we have two cell types that can be customized: the title bar cell and the month name cell. To apply custom style to title you need to initialize the `titleCellStyle` with instance of `CellStyle` class. To apply custom style to title you need to initialize the `monthNameCellStyle` with instance of `CellStyle` class.
+Тo apply custom styling to the month names view, you need to initialize the `monthNamesViewStyle` property of `RadCalendar` with a `CalendarMonthNamesViewStyle` instance.
 
-All properties of `CellStyle` class are applicable to these two cells:
+In this view, you can customize two cell types: the title bar cell and the month name cell.
+
+To apply custom styling to the title, you need to initialize the `titleCellStyle` property with a `CellStyle` instance.
+
+To apply custom styling to the month name, you need to initialize the `monthNameCellStyle` property with a `CellStyle` class.
+
+You can use any of the available `CellStyle` properties.
+
+`CellStyle` provides the following styling properties:
+
+* `cellBorderWidth`: Gets or sets the border width of the cell.
+* `cellBorderColor`: Gets or sets the border color of the cell.
+* `cellBackgroundColor`: Gets or sets the background color of the cell.
+* `cellAlignment`: Gets or sets the alignment of the cell's contents.
+* `cellTextColor`: Gets or sets the color of the cell's text contents.
+* `cellTextFontName`: Gets or sets the font for the cell's text contents by name.
+* `cellTextFontStyle`: Gets or sets the font style for the cell's text contents.
+* `cellTextSize`: Gets or sets the text size of the cell's text contents.
+* `cellPaddingHorizontal`: Gets or sets the amount of horizontal padding of the cell's contents.
+* `cellPaddingVertical`: Gets or sets the amount of vertical padding of the cell's contents. 
 
 ## Example
 
+The following example shows how to style the month view:
+
 <snippet id='calendar-monthnamesview-styling'/>
 
-This is how the calendar looks like now:
+The following screenshots show the example running on device:
 
 ![Calendar year view styling](../../../img/ns_ui/calendar_styling_month_names_ios.png "iOS")      ![Calendar year view styling](../../../img/ns_ui/calendar_styling_month_names_android.png "Android")
 
 ## References
-Want to see this scenario in action?
-Check our SDK examples repo on GitHub. You will find this and many other practical examples with NativeScript UI.
 
-* [Styling Example](https://github.com/telerik/nativescript-ui-samples/tree/master/calendar/app/calendar/cell-styling)
+Want to see more examples using this component?
 
-Related articles you might find useful:
+Check out the [SDK examples repository on GitHub](https://github.com/telerik/nativescript-ui-samples/tree/master/calendar/app/calendar/cell-styling).
 
-* [**Styling Inline Events**]({% slug calendar-features-styling-inlineevents %})
-* [**Styling Year View**]({% slug calendar-features-styling-year-view %})
-* [**Styling Week View**]({% slug calendar-features-styling-week-view %})
-* [**Styling Month View**]({% slug calendar-features-styling-month-view %})
+You might also like:
+
+* [Styling Inline Events]({% slug calendar-features-styling-inlineevents %})
+* [Styling Year View]({% slug calendar-features-styling-year-view %})
+* [Styling Week View]({% slug calendar-features-styling-week-view %})
+* [Styling Month View]({% slug calendar-features-styling-month-view %})

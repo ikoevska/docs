@@ -10,7 +10,7 @@ publish: true
 
 # Styling the RadCalendar Month View
 
-To apply custom style for the month view, you need to initialize the `monthViewStyle` property of `RadCalendar` with a `CalendarMonthViewStyle` instance.
+Тo apply custom styling to the month view, you need to initialize the `monthViewStyle` property of `RadCalendar` with a `CalendarMonthViewStyle` instance.
 
 ## View Styling
 
@@ -28,17 +28,17 @@ To apply custom style for the month view, you need to initialize the `monthViewS
 
 To style any of the available cell types, you need to initialize the corresponding style property of the `CalendarMonthViewStyle` class. The following styling properties are available:
 
-* `dayCellStyle`: Styles the cells that represent a regular day in a month. This is the default style. Initialize this property with a `CalendarDayCellStyle` instance.
-* `selectedDayCellStyle`: Styles the selected cell. Initialize this property with a `CalendarDayCellStyle` instance.
-* `todayCellStyle`: Styles the cell that shows today's date. Initialize this property with a `CalendarDayCellStyle` instance.
-* `dayNameCellStyle`: Styles the cell that shows the name of the day. Initialize this property with a `CalendarCellStyle` instance.
-* `weekNumberCellStyle`: Styles the cells that show the week number. Initialize this property with a `CalendarCellStyle` instance.
-* `weekendCellStyle` Styles the weekend day cells. Initialize this property with a `CalendarDayCellStyle` instance.
-* `titleCellStyle`: Styles the month title. Initialize this property with a `CalendarCellStyle` instance.
+* `dayCellStyle`: Styles the cells that represent a regular day in a month. This is the default style. Initialize this property with a `DayCellStyle` instance.
+* `selectedDayCellStyle`: Styles the selected cell. Initialize this property with a `DayCellStyle` instance.
+* `todayCellStyle`: Styles the cell that shows today's date. Initialize this property with a `DayCellStyle` instance.
+* `dayNameCellStyle`: Styles the cell that shows the name of the day. Initialize this property with a `CellStyle` instance.
+* `weekNumberCellStyle`: Styles the cells that show the week number. Initialize this property with a `CellStyle` instance.
+* `weekendCellStyle` Styles the weekend day cells. Initialize this property with a `DayCellStyle` instance.
+* `titleCellStyle`: Styles the month title. Initialize this property with a `CellStyle` instance.
 
 ### All Cells
 
-`CalendarCellStyle` provides the following styling properties:
+`CellStyle` provides the following styling properties:
 
 * `cellBorderWidth`: Gets or sets the border width of the cell.
 * `cellBorderColor`: Gets or sets the border color of the cell.
@@ -53,7 +53,7 @@ To style any of the available cell types, you need to initialize the correspondi
 
 ### Date Cells
 
-`CalendarDayCellStyle` inherits `CalendarCellStyle` and provides the following additional stying properties:
+`DayCellStyle` inherits `CellStyle` and provides the following additional stying properties:
 
 * `showEventsText`: Shows or hides the event text shown in the date cell. All events are indicated by a shape, regardless if the title is shown or not.
 * `eventTextColor`: Gets or sets the text color for the events shown in the date cell.
