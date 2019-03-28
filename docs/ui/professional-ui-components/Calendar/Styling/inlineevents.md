@@ -28,7 +28,7 @@ To set a color for the inline event's cell indicator (the shape that indicates t
 
 ## Example
 
-The following example shows the use of `InlineEventCellStyle`:
+The following example shows how to style inline events:
 
 <snippet id='calendar-inlineevents-styling'/>
 

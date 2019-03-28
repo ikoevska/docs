@@ -26,7 +26,7 @@ Every class provides additional properties for styling the various visual parts 
 
 ## Example
 
-The following example shows the use of `dayEventsViewStyle` and `allDayEventsViewStyle`:
+The following example shows the use of some of the available styling options:
 
 <snippet id='calenar-monthview-styling'/>
 

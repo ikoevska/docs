@@ -8,25 +8,27 @@ position: 10
 publish: true
 ---
 
-# RadCalendar Week View Styling
+# Styling the RadCalendar Week View
 
-The Week view mode practically is the same as Month view mode, that's why the same rules and requirements for [Month view styling]({% slug calendar-monthview-styling %} "Read more about styling in Month view mode") are applicable.
-In order to apply custom style for this mode, you need to initialize the `weekViewStyle` property of `RadCalendar` with instance of `CalendarWeekViewStyle`.
+> The week view is the same as the month view. The same rules and requirements for [month view styling]({% slug calendar-monthview-styling %} "Read more about styling in Month view mode") are applicable.
+
+To apply custom styling to the week view, you need to initialize the `weekViewStyle` property of `RadCalendar` with a `CalendarWeekViewStyle` instance.
 
 ## Example
-Here's a code snippet demonstrating the usage of the properties of the Style objects mentioned above:
+
+The following example shows how to style the week view:
 
 <snippet id='calendar-weekview-styling'/>
 
 ## References
-Want to see this scenario in action?
-Check our SDK examples repo on GitHub. You will find this and many other practical examples with NativeScript UI.
 
-* [Styling Example](https://github.com/telerik/nativescript-ui-samples/tree/master/calendar/app/calendar/cell-styling)
+Want to see more examples using this component?
 
-Related articles you might find useful:
+Check out the [SDK examples repository on GitHub](https://github.com/telerik/nativescript-ui-samples/tree/master/calendar/app/calendar/cell-styling).
 
-* [**Styling Inline Events**]({% slug calendar-features-styling-inlineevents %})
-* [**Styling Year View**]({% slug calendar-features-styling-year-view %})
-* [**Styling Month Name**]({% slug calendar-features-styling-monthname-view %})
-* [**Styling Month View**]({% slug calendar-features-styling-month-view %})
+You might also like:
+
+* [Styling Inline Events]({% slug calendar-features-styling-inlineevents %})
+* [Styling Year View]({% slug calendar-features-styling-year-view %})
+* [Styling Month Name]({% slug calendar-features-styling-monthname-view %})
+* [Styling Month View]({% slug calendar-features-styling-month-view %})

@@ -33,7 +33,7 @@ To apply custom style to the cells displayed at the top, you can use the same pr
 
 ## Example
 
-The following example shows the use of `dayEventsViewStyle` and `allDayEventsViewStyle`:
+The following example shows how to style the day view:
 
 <snippet id='calendar-dayview-styling'/>
 

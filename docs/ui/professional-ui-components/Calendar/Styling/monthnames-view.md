@@ -35,7 +35,7 @@ You can use any of the available `CellStyle` properties.
 
 ## Example
 
-The following example shows how to style the month view:
+The following example shows how to style the month names view:
 
 <snippet id='calendar-monthnamesview-styling'/>
 
