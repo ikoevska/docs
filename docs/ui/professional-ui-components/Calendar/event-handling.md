@@ -9,15 +9,18 @@ publish: true
 ---
 
 # RadCalendar Event Handling
-{% typedoc_link classes:RadCalendar %} exposes a set of events which inform you about changes in the state of the component coming as a result of user interactions. By handling these events you can perform actions when a date has been selected, the view mode has been changed, etc. The following events are currently exposed by {% typedoc_link classes:RadCalendar %}:
 
-- {% typedoc_link classes:RadCalendar,member:dateSelectedEvent %} - fired when a date has been selected - either programmatically or as a result of end-user interaction
-- {% typedoc_link classes:RadCalendar,member:dateDeselectedEvent %} - fired when a date has been deselected - either programmatically or as a result of end-user interaction
-- {% typedoc_link classes:RadCalendar,member:inlineEventSelectedEvent %} - fired when an event, part the list of inline events for a given cell, has been selected
-- {% typedoc_link classes:RadCalendar,member:navigatedToDateEvent %} - fired when the user navigates to a given date
-- {% typedoc_link classes:RadCalendar,member:navigatingToDateStartedEvent %} - fired when navigation to a given date is about to happen
-- {% typedoc_link classes:RadCalendar,member:viewModeChangedEvent %} - fired when the view-mode changes to one of the modes described in [view modes]({% slug calendar-view-modes %})
-- {% typedoc_link classes:RadCalendar,member:dayViewEventSelectedEvent %} - fired when an event, part the list of events in the day view area of the calendar, has been selected
+{% typedoc_link classes:RadCalendar %} exposes events that notify you about changes in the state of the component resulting from user interactions. By handling these events, you can perform actions on date selection, when changing the view, and so on. 
+
+{% typedoc_link classes:RadCalendar %} exposes the following events:
+
+* {% typedoc_link classes:RadCalendar,member:dateSelectedEvent %}: Fires when a date is selected programmatically or by the end user.
+* {% typedoc_link classes:RadCalendar,member:dateDeselectedEvent %}: Fires when a date is deselected programmatically or by the end user.
+* {% typedoc_link classes:RadCalendar,member:inlineEventSelectedEvent %}: Fires when an inline event is selected.
+* {% typedoc_link classes:RadCalendar,member:navigatedToDateEvent %}: - fired when the user navigates to a given date
+* {% typedoc_link classes:RadCalendar,member:navigatingToDateStartedEvent %}: - fired when navigation to a given date is about to happen
+* {% typedoc_link classes:RadCalendar,member:viewModeChangedEvent %}: - fired when the view-mode changes to one of the modes described in [view modes]({% slug calendar-view-modes %})
+* {% typedoc_link classes:RadCalendar,member:dayViewEventSelectedEvent %}: - fired when an event, part the list of events in the day view area of the calendar, has been selected
 
 
 ## Providing Handlers
