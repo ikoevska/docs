@@ -17,46 +17,49 @@ publish: true
 * {% typedoc_link classes:RadCalendar,member:dateSelectedEvent %}: Fires when a date is selected programmatically or by the end user.
 * {% typedoc_link classes:RadCalendar,member:dateDeselectedEvent %}: Fires when a date is deselected programmatically or by the end user.
 * {% typedoc_link classes:RadCalendar,member:inlineEventSelectedEvent %}: Fires when an inline event is selected.
-* {% typedoc_link classes:RadCalendar,member:navigatedToDateEvent %}: - fired when the user navigates to a given date
-* {% typedoc_link classes:RadCalendar,member:navigatingToDateStartedEvent %}: - fired when navigation to a given date is about to happen
-* {% typedoc_link classes:RadCalendar,member:viewModeChangedEvent %}: - fired when the view-mode changes to one of the modes described in [view modes]({% slug calendar-view-modes %})
-* {% typedoc_link classes:RadCalendar,member:dayViewEventSelectedEvent %}: - fired when an event, part the list of events in the day view area of the calendar, has been selected
+* {% typedoc_link classes:RadCalendar,member:navigatedToDateEvent %}: Fires when the user navigates to a date.
+* {% typedoc_link classes:RadCalendar,member:navigatingToDateStartedEvent %}: Fires when navigation to a date begins.
+* {% typedoc_link classes:RadCalendar,member:viewModeChangedEvent %}: Fires when the view changes to another [view mode]({% slug calendar-view-modes %}).
+* {% typedoc_link classes:RadCalendar,member:dayViewEventSelectedEvent %}: Fires when an event, part of the list of events in the day view area of the calendar, is selected.
 
 
 ## Providing Handlers
-Handling {% typedoc_link classes:RadCalendar %}'s events is done in the familiar {N} way. Here's a XML snippet demonstrating a scenario in which we're subscribing for all exposed events:
+
+You can handle {% typedoc_link classes:RadCalendar %} events in the familiar {N} way. 
+
+The following example shows how to subscribe for all available events in your `XML`:
 
 <snippet id='calendar-handling-events-xml'/>
 
-The event-handlers are defined in the code-behind file associated with the page as shown below:
+The following example shows how to define the event handlers in the code-behind file associated with the `XML` page:
 
 <snippet id='calendar-handling-events'/>
 
 ## Event Arguments
-All events exposed by {% typedoc_link classes:RadCalendar %} provide additional information to their handlers that is needed to properly handle them. Here's a brief description of the event arguments coming with each of the events:
 
-- {% typedoc_link classes:RadCalendar,member:dateSelectedEvent %} and {% typedoc_link classes:RadCalendar,member:dateDeselectedEvent %} deliver their arguments in the form of an instance of {% typedoc_link classes:CalendarSelectionEventData %} class. This class exposes the following properties:
-	- `eventName` - the name of the event
-	- `date` - the selected date
-	- `object` - the object that fires the event
-- {% typedoc_link classes:RadCalendar,member:inlineEventSelectedEvent %} delivers its data by providing an instance of the {% typedoc_link classes:CalendarInlineEventSelectedData %}. This class defines the following properties:
-	- `eventName` - the name of the event
-	- `object` - the sender of the event
-	- `eventData` - an instance of the {% typedoc_link classes:CalendarEvent %} class representing the selected event
-- {% typedoc_link classes:RadCalendar,member:navigatedToDateEvent %} provides an instance of the `CalendarNavigationEventData` {% typedoc_link classes:CalendarNavigationEventData %} class with the following properties:
-	- `eventName` - the name of the event
-	- `object` - the sender of the event
-	- `date` - the date the navigation leads to
-- {% typedoc_link classes:RadCalendar,member:dayViewEventSelectedEvent %} delivers its data by providing an instance of the {% typedoc_link classes:CalendarDayViewEventSelectedData %}. This class defines the following properties:
-	- `eventName` - the name of the event
-	- `object` - the sender of the event
-	- `eventData` - an instance of the {% typedoc_link classes:CalendarEvent %} class representing the selected event
+All {% typedoc_link classes:RadCalendar %} events provide additional information to their handlers. The handlers require this information for proper event handling.
+
+The following event arguments are available:
+
+* {% typedoc_link classes:RadCalendar,member:dateSelectedEvent %} and {% typedoc_link classes:RadCalendar,member:dateDeselectedEvent %} deliver their data as a {% typedoc_link classes:CalendarSelectionEventData %} class instance. This class provides the following properties:
+	* `eventName`: The name of the event.
+	* `date`: The selected date.
+	* `object`: The object that fires the event.
+* {% typedoc_link classes:RadCalendar,member:inlineEventSelectedEvent %} delivers its data as a {% typedoc_link classes:CalendarInlineEventSelectedData %} class instance. This class provides the following properties:
+	* `eventName` : The name of the event.
+	* `object`: The object that fires the event.
+	* `eventData`: A {% typedoc_link classes:CalendarEvent %} class instance representing the selected event.
+* {% typedoc_link classes:RadCalendar,member:navigatedToDateEvent %} delivers its data as a `CalendarNavigationEventData` {% typedoc_link classes:CalendarNavigationEventData %} class instance. This class provides the following properties:
+	* `eventName`: The name of the event.
+	* `object`: The object that fires the event.
+	* `date`: The date the navigation leads to.
+* {% typedoc_link classes:RadCalendar,member:dayViewEventSelectedEvent %} delivers its data by as a {% typedoc_link classes:CalendarDayViewEventSelectedData %} class instance. This class provides the following properties:
+	* `eventName`: The name of the event.
+	* `object`: The object that fires the event.
+	* `eventData`: A {% typedoc_link classes:CalendarEvent %} class instance representing the selected event.
 	
 ## References
-Want to see this scenario in action?
-Check our SDK examples repo on GitHub. You will find this and many other practical examples with NativeScript UI.
 
-* [Event-handlers Example](https://github.com/telerik/nativescript-ui-samples/tree/master/calendar/app/calendar/events)
-	
-	
+Want to see more examples using this component?
 
+Check out the [SDK examples repository on GitHub](https://github.com/telerik/nativescript-ui-samples/tree/master/calendar/app/calendar/events).
